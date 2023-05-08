@@ -1,0 +1,8 @@
+//Print all even numbers between 0 and n, where n is a number greater than 0
+
+function evenNumbers(num) {
+  for (let v = 0; v <= num; v += 2)
+  console.log(v);
+}
+
+evenNumbers(5);

@@ -1,0 +1,17 @@
+/*
+Create a function that accepts an array of real numbers and returns true if the array contains an even number and false if it does not.
+*/
+
+
+function checkIfTrue(arr){
+    for(i = 0; i <= arr.length - 1; i++){
+      if (arr[i] >= 0) {
+        return true;
+      }
+    }
+  return false;
+}
+
+const test = (checkIfTrue([-3, -9, -8, 2]));
+
+console.log(test);

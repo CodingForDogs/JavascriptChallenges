@@ -1,0 +1,50 @@
+
+/*
+Prompt:
+Create a function that accepts an array of real numbers and a boolean and does the following:
+If the boolean is false, returns a new array that contains all negative numbers from the original array.
+If the boolean is true, returns a new array that contains all positive numbers from the original array.
+*/
+
+const myArrayOfNumbers = [22, -58, 7, 20, -35];
+
+function filterArray(arr, returnPositive) {
+  const returnNumbers = [];
+
+  for (let i = 0; i <= arr.length; i++) {
+    const singleNumber = arr[i];
+
+    if (returnPositive === true && singleNumber >= 0) {
+      returnNumbers.push(singleNumber);
+    } else if (returnPositive === false && singleNumber < 0) {
+      returnNumbers.push(singleNumber);
+    }
+  }
+
+  return returnNumbers;
+}
+
+const filteredArray = filterArray(myArrayOfNumbers, false);
+console.log(filteredArray);
+
+//////////////////////////////////////////////////////////////////
+
+function filterArray_v2(arr, returnPositive) {
+  if (returnPositive === true) {
+    return arr.filter((singleNumber) => singleNumber >= 0);
+  } else if (returnPositive === false) {
+    return arr.filter((singleNumber) => singleNumber < 0);
+  }
+}
+
+const filteredArray_v2 = filterArray_v2(myArrayOfNumbers, false);
+console.log(filteredArray_v2);
+
+///////////////////////////////////////////////////////////////////
+
+function filterArray_v3(arr, returnPositive) {
+  return arr.filter((singleNumber) => returnPositive === true ? singleNumber >= 0 : singleNumber < 0);
+}
+
+const filteredArray_v3 = filterArray_v3(myArrayOfNumbers, false);
+console.log(filteredArray_v3);

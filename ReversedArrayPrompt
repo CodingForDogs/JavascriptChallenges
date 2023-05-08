@@ -1,0 +1,16 @@
+//Create a function that accepts an array and returns a reversed version of the array
+
+function nameFunction(arr){
+  for(let i = letters.length - 1; i >= 0; i--){
+    const index = letters[i];
+
+    reversedArray.push(index);
+  }
+  console.log(reversedArray);
+}
+
+const letters = ["a", "b", "c", "d"];
+
+const reversedArray = [];
+
+nameFunction();
